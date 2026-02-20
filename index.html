@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>drmscenes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(120deg, #ffd9ec, #e8dcff, #dff4ff);
+    overflow-x: hidden;
+}
+
+/* soft floating pastel glow */
+body::before, body::after {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+body::before {
+    top: -120px;
+    left: -120px;
+}
+
+body::after {
+    bottom: -120px;
+    right: -120px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(20px);
+    border-radius: 35px;
+    padding: 35px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 35px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.bio {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 25px 0;
+    padding: 18px;
+    background: rgba(255,255,255,0.65);
+    border-radius: 20px;
+}
+
+/* Instagram Button */
+.insta-btn {
+    display: block;
+    margin: 10px 0 25px;
+    padding: 14px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    background: linear-gradient(45deg, #ffb6d9, #cbb6ff);
+    color: white;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.insta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Main Toggle Button */
+.main-btn {
+    background: linear-gradient(45deg, #ff9ac6, #b69cff);
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.main-btn:hover {
+    transform: scale(1.06);
+}
+
+/* Hidden Links Section */
+.links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    margin-top: 20px;
+}
+
+.links.show {
+    max-height: 300px;
+}
+
+/* Individual Drama Links */
+.link-item {
+    display: block;
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 25px;
+    background: white;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.link-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+</style>
+
+<script>
+function toggleLinks() {
+    document.getElementById("dramaLinks").classList.toggle("show");
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<img src="download.jpg" class="profile-img" alt="profile">
+
+<h1>drmscenes ☁️🍒</h1>
+
+<div class="bio">
+asian drama scenepacks <br><br>
+~ please give credits when using <br>
+~ dm to join as admin <br>
+~ no reposting without permission <br>
+☁️ made for editors, by an editor 🍒
+</div>
+
+<a href="https://www.instagram.com/cansoo2.0?igsh=MWtmN2MxaXl1MTRwcA==" 
+   target="_blank" 
+   class="insta-btn">
+   ✧ editing channel @cansoo2.0 ✧
+</a>
+
+<div class="main-btn" onclick="toggleLinks()">
+☁️ view drama collection 🍒
+</div>
+
+<div class="links" id="dramaLinks">
+
+<a href="https://drive.google.com/drive/folders/1hY0QuAvRYyCh_G7gZE02nUzJm4BPUwdG" class="link-item">
+🍒 how dare you
+</a>
+
+<a href="https://drive.google.com/drive/folders/11YRmcOOVrQu0iwRD3OuE9BmWXpKDaOzA" class="link-item">
+☁️ touch your heart
+</a>
+
+</div>
+
+<div class="footer">
+drmscenes © 2026
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
